@@ -1,0 +1,3 @@
+#!/bin/bash
+ausearch -m avc -ts recent
+sudo runcon unconfined_u:system_r:httpd_sys_script_t:s0 spawn-fcgi -n test_fcgi/hello_world -s /var/run/pepper/app.sock -{g,u}nginx
